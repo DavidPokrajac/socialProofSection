@@ -1,0 +1,13 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  background: no-repeat top left url("./images/bg-pattern-top-desktop.svg"), no-repeat bottom right url("./images/bg-pattern-bottom-desktop.svg");
+}
