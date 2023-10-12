@@ -14,15 +14,19 @@ body {
   height: 100vh;
   overflow: hidden;
   background: no-repeat top left url("./images/bg-pattern-top-desktop.svg"), no-repeat bottom right url("./images/bg-pattern-bottom-desktop.svg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 main {
-  width: 80%;
+  max-width: 75%;
   margin: 0 auto;
 }
 
 main > section:first-child {
   display: flex;
+  margin-bottom: 3rem;
 }
 
 main > section:first-child .intro {
@@ -78,7 +82,10 @@ main > section:first-child .intro h1 {
 
 .reviews .card img {
   border-radius: 50%;
+  width: 40px;
+  height: 40px;
   float: left;
+  margin-right: 1rem;
 }
 
 .reviews .card span {
@@ -93,4 +100,47 @@ main > section:first-child .intro h1 {
 blockquote {
   margin: 0;
   clear: left;
+  line-height: 1.3em;
+}
+
+.card .head {
+  margin-bottom: 2rem;
+}
+
+.reviews .card:nth-child(2) {
+  transform: translateY(15px);
+}
+
+.reviews .card:last-child {
+  transform: translateY(30px);
+}
+
+@media (max-width: 600px) {
+  body {
+    background: no-repeat top left url("./images/bg-pattern-top-mobile.svg"), no-repeat bottom right url("./images/bg-pattern-bottom-mobile.svg");
+    height: auto;
+  }
+  main {
+    max-width: 95%;
+  }
+  main > section:first-child {
+    flex-direction: column;
+  }
+  .intro {
+    text-align: center;
+  }
+  .most-rated div {
+    width: 100%;
+    text-align: center;
+  }
+  .most-rated div:nth-of-type(2),
+  .most-rated div:last-of-type {
+    margin-left: 0;
+  }
+  .reviews {
+    flex-direction: column;
+  }
+  .reviews .card:not(.reviews .card:last-of-type) {
+    margin-right: 0;
+  }
 }
