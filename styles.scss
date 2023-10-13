@@ -61,8 +61,24 @@ main > section:first-child .intro h1 {
     font-weight: bold;
     padding: 1rem;
     margin: 1.5rem 0;
-    width: 80%;
+    width: 60%;
     font-size: 13px;
+    border-radius: 10px;
+}
+
+.most-rated div .rated {
+    display: inline-block;
+    height: 20px;
+    vertical-align: middle;
+    margin: 0 1rem;
+}
+
+.most-rated div .rated .star {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background: no-repeat url('./images/icon-star.svg');
+    vertical-align: sub;
 }
 
 .most-rated div:nth-of-type(2) {
@@ -129,23 +145,38 @@ blockquote {
         background: no-repeat top left url('./images/bg-pattern-top-mobile.svg'),
     no-repeat bottom right url('./images/bg-pattern-bottom-mobile.svg');
         height: auto;
+        overflow: visible;
     }
 
     main {
-        max-width: 95%;
+        max-width: 90%;
     }
 
     main > section:first-child {
         flex-direction: column;
+        margin-bottom: 1rem;
     }
 
     .intro {
         text-align: center;
     }
 
+    .intro h1 {
+        line-height: 0.9;
+    }
+
+    .intro p {
+        font-size: 1.1rem;
+    }
+
     .most-rated div {
         width: 100%;
         text-align: center;
+    }
+
+    .most-rated div .rated {
+        display: block;
+        margin-bottom: 0.5rem;
     }
 
     .most-rated div:nth-of-type(2),
