@@ -126,6 +126,15 @@ blockquote {
     margin: 0;
     clear: left;
     line-height: 1.3em;
+    quotes: '“' '”';
+}
+
+blockquote::before {
+    content: open-quote;
+}
+
+blockquote::after {
+    content: close-quote;
 }
 
 .card .head {
