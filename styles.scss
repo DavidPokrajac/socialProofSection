@@ -36,23 +36,24 @@ main {
 main > section:first-child {
     display: flex;
     margin-bottom: 3rem;
+    color: $veryDarkMagenta;
 }
 
 main > section:first-child .intro {
-    flex: 1 1 50%;
+    flex: 1 1 40%;
 }
 
 main > section:first-child .most-rated {
-    flex: 1 1 50%;
+    flex: 1 1 60%;
 }
 
-main > section:first-child .intro h1 {
-    color: $veryDarkMagenta;
+h1 {
     font-size: 2.75rem;
 }
 
-.intro p {
-    color: $veryDarkMagenta;
+h1,
+h2 {
+    margin: 0;
 }
 
 .most-rated div {
@@ -61,8 +62,7 @@ main > section:first-child .intro h1 {
     font-weight: bold;
     padding: 1rem;
     margin: 1.5rem 0;
-    width: 60%;
-    font-size: 13px;
+    width: 65%;
     border-radius: 10px;
 }
 
@@ -81,12 +81,16 @@ main > section:first-child .intro h1 {
     vertical-align: sub;
 }
 
+.most-rated div:first-of-type {
+    margin-left: 12.5%;
+}
+
 .most-rated div:nth-of-type(2) {
-    margin-left: 10%;
+    margin-left: 25%;
 }
 
 .most-rated div:last-of-type {
-    margin-left: 20%;
+    margin-left: auto;
 }
 
 .reviews {
@@ -118,7 +122,6 @@ main > section:first-child .intro h1 {
 }
 
 .card h2 {
-    margin: 0;
     font-size: 1rem;
 }
 
@@ -149,7 +152,17 @@ blockquote::after {
     transform: translateY(30px);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1200px) {
+    .most-rated div {
+        width: 75%;
+    }
+
+    .most-rated div:nth-of-type(2) {
+        margin-left: 15%;
+    }
+}
+
+@media (max-width: 900px) {
     body {
         background: no-repeat top left url('./images/bg-pattern-top-mobile.svg'),
     no-repeat bottom right url('./images/bg-pattern-bottom-mobile.svg');
@@ -188,6 +201,7 @@ blockquote::after {
         margin-bottom: 0.5rem;
     }
 
+    .most-rated div:first-of-type,
     .most-rated div:nth-of-type(2),
     .most-rated div:last-of-type {
         margin-left: 0;
